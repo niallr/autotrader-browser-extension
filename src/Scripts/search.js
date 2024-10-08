@@ -271,6 +271,11 @@ function getContent() {
 						keySpecsExteriorLength.innerText = "Exterior Length: " + data.specification.techData.vehicleLength;
 						yetAnotherSpecsBox.prepend(keySpecsExteriorLength);
 						
+						console.log(advertId + " - " + "Emission Class: " + data.specification.emissionClass);
+						let keySpecsEmissionClass = keySpecsItem1.cloneNode(true);
+						keySpecsEmissionClass.innerText = "Emission Class: " + data.specification.emissionClass;
+						yetAnotherSpecsBox.prepend(keySpecsEmissionClass);
+						
 						listing.querySelector('[data-testid="search-listing-specs"]').parentNode.append(yetAnotherSpecsBox);
 						
 						if (data.specification.techData.bodytype == "Estate" +(data.specification.techData.bootspaceSeatsUp.split(" ")[0]) >= 400) {
